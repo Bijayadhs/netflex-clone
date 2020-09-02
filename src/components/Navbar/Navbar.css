@@ -1,0 +1,23 @@
+.nav{
+    display: flex;
+    padding: 20px 0;
+}
+
+.nav__logo{
+    width: 90px;
+    height: 24px; 
+    margin-right: 20px; 
+}
+
+.nav__browse{
+    display: flex;
+    flex: 1;
+    
+}
+
+
+.nav__menu{
+    color: #fff;
+    display: flex;
+
+}

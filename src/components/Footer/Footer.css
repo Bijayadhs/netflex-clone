@@ -1,0 +1,28 @@
+.footer{
+    height: 20vh;
+        color: #808080;
+
+}
+
+.social-link{
+    color: #808080;
+}
+
+.footer__links{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 14px 0;
+}
+.footer__link{
+    color: #808080;
+    font-size: 13px;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.footer__service button{
+    color: #808080;
+    border: 1px solid #808080;
+    background: transparent;
+    padding: 4px 8px;
+}
