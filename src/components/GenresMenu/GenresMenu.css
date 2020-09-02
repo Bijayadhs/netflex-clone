@@ -1,0 +1,25 @@
+.genres{
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.genres h1{
+    color: #fff;
+    margin-right: 40px;
+}
+
+
+.genres__grid button{
+    background: transparent;
+    color: #eee;
+    border: 1px solid #eee;
+    padding: 0 10px;
+    outline: none;
+}
+.genres__grid button:first-child{
+    border-right: none;
+}

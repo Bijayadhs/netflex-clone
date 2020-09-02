@@ -10,7 +10,6 @@ export default function MoviesList({title, fetchUrl}) {
     useEffect(()=>{
         async function  getMovie(){
         const request = await axios.get(window.apiHost+fetchUrl);
-        console.log(request.data.results)
         setMovies(request.data.results)
         return request;
         }
@@ -20,7 +19,7 @@ export default function MoviesList({title, fetchUrl}) {
 
     return (
         <div className="movies">
-            <h1>{title}</h1>
+            <h1 className="movies__title container">{title}</h1>
             <div className="movies__row">
                 {movies.map(movie=><Movie key={movie.id} movie={movie}/>)}
             </div>

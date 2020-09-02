@@ -8,6 +8,7 @@
 body{
   background-color: #202020;
   font-family: sans-serif;
+  color: #fff;
 }
 
 li{
@@ -30,6 +31,6 @@ a:hover{
       }
 
 .container{
-  width: 90%;
+  max-width: 90%;
   margin: 0 auto;
 }

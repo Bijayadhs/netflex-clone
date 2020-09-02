@@ -1,0 +1,8 @@
+.genres__dropdown{
+    flex: 1;
+    margin: 10px 0;
+}
+.genres_dropdown option{
+    background-color: #000;
+
+}

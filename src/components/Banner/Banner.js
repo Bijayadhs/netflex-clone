@@ -7,8 +7,8 @@ import VolumeOffIcon from '@material-ui/icons/VolumeOff';
 
 
 export default function Banner() {
-    const [play, setPlay]=useState(false);
-    const [mute, setMute]=useState(false);
+    const [play, setPlay]=useState(true);
+    const [mute, setMute]=useState(true);
     
     const onPause = (p)=>setPlay(false)
     const onPlay = (p)=>setPlay(true)
