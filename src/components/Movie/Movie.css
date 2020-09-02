@@ -1,7 +1,24 @@
 .movies{
-    height: 20vh;
-    z-index: 1000000;
+    z-index: 10000000;
+    margin: 100px 0;
 }
 .movies h1{
+    color: #fff;
+}
+.movies__row{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.movies_row::-webkit-scrollbar{
+    display: hidden;
+}
+.movie{
+    margin-right: 20px;
+    width: 228px;
+    height: 128px;
+}
+
+.movie h4{
     color: #fff;
 }

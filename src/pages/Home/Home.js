@@ -1,48 +1,23 @@
-import React,{useState} from 'react';
-import ReactPlayer from 'react-player';
+import React from 'react';
 import './Home.css';
-import VolumeUpIcon from '@material-ui/icons/VolumeUp';
-import VolumeOffIcon from '@material-ui/icons/VolumeOff';
 import MoviesList from '../../components/Movie/MoviesList';
+import Banner from '../../components/Banner/Banner';
+
 
 
 
 export default function Home() {
-    const [play, setPlay]=useState(false);
-    const [mute, setMute]=useState(false);
-    
-    const onPause = (p)=>setPlay(false)
-    const onPlay = (p)=>setPlay(true)
-    function onMuted(){
-        setMute((mute)=>!mute)
+    const API_KEY = '6f7bb0549630d54a64924a20e9310867';
+    const requests = {
+        fetchTrending: `/trending/all/week?api_key=${API_KEY}`,
+        fetchNetflexOriginals: `/discover/tv?api_key=${API_KEY}`    
     }
+   
     return (
         <div>
-        <div className="banner">
-            <div className="banner__video">
-                <ReactPlayer url="/Dme2.mp4" width="100%" height="600px" playing={play} muted={mute}/>
-            </div>
-            <div className="banner__details">
-                <h1 className="movie__title">
-                    <img src={"/img/dme.svg"} alt="Decicable Me"/>
-                </h1>
-                <p className="movie__detail">He's an evil villain who's plotting to steal the moon. But not if three little girls have anything to say about it!</p>
-                <div className="movie__button">
-                    <button onClick={onPlay}>Play</button>
-                    <button onClick={onPause}>Pause</button>
-                </div>
-                <div className="movie__sound">
-                    <button onClick={onMuted}>
-                        {mute?<VolumeOffIcon/>:<VolumeUpIcon/>}
-                    </button>
-                    <span>M</span> 
-                </div>
-            </div>          
+         <Banner />
+         <MoviesList title="Netflex Originals" fetchUrl={requests.fetchNetflexOriginals}/>
+         <MoviesList title="Trending Now" fetchUrl={requests.fetchTrending}/>
         </div>
-
-         <MoviesList title="My List"/>
-         <MoviesList title="Trending Now"/>
-         <MoviesList title="Popular in Australia"/>
-         </div>
     )
 }

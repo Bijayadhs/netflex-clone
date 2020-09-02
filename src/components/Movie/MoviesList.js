@@ -1,24 +1,30 @@
-import React,{useEffect} from 'react';
+import React,{useState, useEffect} from 'react';
 import Movie from './Movie';
 import axios from 'axios';
 
-export default function MoviesList(props) {
+
+export default function MoviesList({title, fetchUrl}) {
     
-    const movieId = 550;
-    const API_KEY = '6f7bb0549630d54a64924a20e9310867'
+    const [movies, setMovies] = useState([])
+    
     useEffect(()=>{
         async function  getMovie(){
-        const res = await axios.get(`https://api.themoviedb.org/3/movie/${550}?api_key=${API_KEY}`);
-        console.log(res.data)
+        const request = await axios.get(window.apiHost+fetchUrl);
+        console.log(request.data.results)
+        setMovies(request.data.results)
+        return request;
         }
         getMovie()
-    },[])
+    },[fetchUrl])
 
 
     return (
         <div className="movies">
-            <h1>{props.title}</h1>
-            <Movie/>
+            <h1>{title}</h1>
+            <div className="movies__row">
+                {movies.map(movie=><Movie key={movie.id} movie={movie}/>)}
+            </div>
+            
         </div>
     )
 }
