@@ -17,14 +17,15 @@ import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
 export default function Navbar() {
     return (
-        <div className="container nav">
-            <img className="nav__logo" src={"/img/logo.svg"} alt="NETFLEX"/>
+        <div className="container">
+            <div className="nav">
+            <Link to='/browse'><img className="nav__logo" src={"/img/logo.svg"} alt="NETFLEX"/></Link> 
             <ul className="nav__browse">
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/'>TV Shows</Link></li>
-                <li><Link to='/'>Movies</Link></li>
-                <li><Link to='/'>Latest</Link></li>
-                <li><Link to='/'>My List</Link></li>
+                <li><Link to='/browse'>Home</Link></li>
+                <li><Link to='/browse/genres/2251'>TV Shows</Link></li>
+                <li><Link to='/browse/genres/7684'>Movies</Link></li>
+                <li><Link to='/browse/latest'>Latest</Link></li>
+                <li><Link to='/browse/my-list'>My List</Link></li>
             </ul>
             <ul className="nav__menu">
                 <li><SearchIcon/></li>
@@ -36,6 +37,7 @@ export default function Navbar() {
 
 
             </ul>
+            </div>
         </div>
     )
 }

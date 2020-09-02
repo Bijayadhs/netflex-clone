@@ -1,0 +1,55 @@
+.banner{
+    color: #fff;
+
+}
+.banner__video{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: -20px;
+}
+.banner__details{
+    width: 90%;
+    position: absolute;
+    top: 140px;
+    left: 60px;
+    z-index: 100;
+}
+.banner__details p{
+    width: 400px;
+}
+.movie__button{
+
+}
+.movie__button button{
+    padding: .5rem 2rem;
+    margin: 1rem 1rem 1rem 0;    
+    border: 1px solid #fff;
+    border-radius: 5px;
+    outline: none;
+}
+.movie__sound{
+    position: absolute;
+    bottom: 0;
+    right: -40px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   }
+.movie__sound button{
+    margin-right: 20px;
+    color: #fff;
+  
+    padding: 4px;
+    background-color: transparent;   
+    border: 1px solid #fff;
+    border-radius: 50%;
+    outline: none;
+}
+.movie__sound span{
+    border-left: 3px solid #fff;
+    padding: 3px 40px 3px 10px;
+    background-color:#444;
+
+}

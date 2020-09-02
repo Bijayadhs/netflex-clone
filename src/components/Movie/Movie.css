@@ -1,0 +1,7 @@
+.movies{
+    height: 20vh;
+    z-index: 1000000;
+}
+.movies h1{
+    color: #fff;
+}

@@ -8,7 +8,7 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 export default function Footer() {
     return (
         <div className="footer container">       
-            <div class="social-links">
+            <div className="social-links">
                 <Link className="social-link" to="https://www.facebook.com/Netflix/" target="_blank" aria-label="facebook">
                 <FacebookIcon />
                 </Link>
